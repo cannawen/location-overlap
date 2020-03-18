@@ -1,0 +1,7 @@
+{ 
+  "timelineObjects" : [
+    {
+      "placeVisit" : { "location": { "placeId" : "ABCTestPlaceId"}}
+    }
+  ]
+}
