@@ -1,4 +1,4 @@
-function didUserVisit(data, targetPlaceId) {
+function didUserVisit(data, targetPlaceId: string) {
   return data
     .timelineObjects
     .map(timelineObject => timelineObject.placeVisit?.location.placeId)

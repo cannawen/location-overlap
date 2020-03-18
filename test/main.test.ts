@@ -1,6 +1,6 @@
-const fs = require('fs');
+let fs = require('fs');
 
-const {didUserVisit} = require('../src/main');
+let {didUserVisit} = require('../src/main');
 
 describe('Google Location History Takeout data file', () => {
   describe('has user been to specific placeId', () => {
