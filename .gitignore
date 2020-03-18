@@ -1,1 +1,7 @@
 node_modules/*
+
+data/*.json
+
+# Ignores compiled TypeScript files
+**/src/**/*.map
+**/src/**/*.js

@@ -1,0 +1,10 @@
+{ 
+  "timelineObjects" : [
+    {
+      "activitySegment" : {}
+    },
+    {
+      "placeVisit" : { "location": { "placeId" : "ABCTestPlaceId"}}
+    }
+  ]
+}
