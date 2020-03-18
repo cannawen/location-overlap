@@ -1,5 +1,5 @@
-function sum(a, b) {
-  return a + b;
+function didUserVisit(data, placeId) {
+  return undefined;
 }
 
-module.exports = {sum};
+module.exports = {didUserVisit};
