@@ -1,0 +1,40 @@
+{ 
+  "timelineObjects" : [
+    {      
+      "activitySegment" : {} 
+    },
+    {
+      "placeVisit" : { 
+        "location": { "placeId" : "ABCTestPlaceId"},
+        "duration" : {
+          "startTimestampMs" : "500",
+          "endTimestampMs" : "750"
+        }
+      }
+    },
+    {      
+      "activitySegment" : {} 
+    },
+    {
+      "placeVisit" : { 
+        "location": { "placeId" : "DEFTestPlaceId"},
+        "duration" : {
+          "startTimestampMs" : "3500",
+          "endTimestampMs" : "4500"
+        }
+      }
+    },
+    {      
+      "activitySegment" : {} 
+    },
+    {
+      "placeVisit" : { 
+        "location": { "placeId" : "XYZTestPlaceId"},
+        "duration" : {
+          "startTimestampMs" : "5000",
+          "endTimestampMs" : "6000"
+        }
+      }
+    }
+  ]
+}
