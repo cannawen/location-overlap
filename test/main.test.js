@@ -11,11 +11,11 @@ describe('Google Location History Takeout data file', () => {
     })
 
     test('yes', () => {
-      expect(didUserVisit(testData, "ABCTestPlaceId")).toBe(true);
+      expect(didUserVisit(testData, "ABCTestPlaceId").length).toBe(1);
     })
 
     test('no', () => {
-      expect(didUserVisit(testData, "XYZTestPlaceId")).toBe(false);
+      expect(didUserVisit(testData, "XYZTestPlaceId").length).toBe(0);
     })
   })
 })

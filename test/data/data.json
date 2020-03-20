@@ -4,7 +4,9 @@
       "activitySegment" : {} 
     },
     {
-      "placeVisit" : { "location": { "placeId" : "ABCTestPlaceId"}}
+      "placeVisit" : { 
+        "location": { "placeId" : "ABCTestPlaceId"}
+      }
     }
   ]
 }
