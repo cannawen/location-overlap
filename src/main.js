@@ -1,4 +1,8 @@
-function findOverlap(confirmedData, unconfirmedData) {
+let fs = require('fs');
+
+function findOverlap(confirmedDataFilePath, unconfirmedDataFilePath) {
+  const confirmedData = JSON.parse(fs.readFileSync(confirmedDataFilePath, 'utf8'))
+  const unconfirmedData = JSON.parse(fs.readFileSync(unconfirmedDataFilePath, 'utf8'))
   return confirmedData.timelineObjects
     .filter(timelineObject => timelineObject.placeVisit != undefined)
     .map(timelineObject => timelineObject.placeVisit)

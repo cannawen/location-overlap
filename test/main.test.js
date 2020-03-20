@@ -3,16 +3,16 @@ let fs = require('fs');
 let {didUserVisit, findOverlap} = require('../src/main');
 
 describe('Two data sets', () => {
-  let confirmedData;
-  let unconfirmedData;
+  let confirmedDataFilePath;
+  let unconfirmedDataFilePath;
 
   beforeEach(() => {
-    confirmedData = JSON.parse(fs.readFileSync('./test/data/confirmedData.json', 'utf8'))
-    unconfirmedData = JSON.parse(fs.readFileSync('./test/data/unconfirmedData.json', 'utf8'))
+    confirmedDataFilePath = './test/data/confirmedData.json';
+    unconfirmedDataFilePath = './test/data/unconfirmedData.json';
   })
 
   test('find overlap', () => {
-    expect(findOverlap(confirmedData, unconfirmedData)).toEqual([{
+    expect(findOverlap(confirmedDataFilePath, unconfirmedDataFilePath)).toEqual([{
         "placeId": "DEFTestPlaceId", 
         "startTimestampMs" : 3500,
         "endTimestampMs" : 4000
