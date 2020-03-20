@@ -1,5 +1,8 @@
 function findOverlap(confirmedData, unconfirmedData) {
-  return [];
+  return confirmedData.timelineObjects
+    .filter(timelineObject => timelineObject.placeVisit != undefined)
+    .map(timelineObject => timelineObject.placeVisit)
+    .filter(placeVisit => didUserVisit(unconfirmedData, placeVisit.location.placeId, placeVisit.duration.startTimestampMs, placeVisit.duration.endTimestampMs))
 }
 
 function didUserVisit(unconfirmedData, confirmedPlaceId, confirmedStartTime, confirmedEndTime) {
@@ -16,7 +19,7 @@ function didUserVisit(unconfirmedData, confirmedPlaceId, confirmedStartTime, con
 
         return !(unconfirmedUserWasTherePriorToConfirmedTime || unconfirmedUserWasThereAfterConfirmedTime);
       }
-    );
+    ).length === 1;
 }
 
 module.exports = {didUserVisit, findOverlap};
