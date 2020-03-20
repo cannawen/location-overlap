@@ -35,6 +35,15 @@
           "endTimestampMs" : "6000"
         }
       }
+    },
+    {
+      "placeVisit" : { 
+        "location": { "placeId" : "ABCTestPlaceId"},
+        "duration" : {
+          "startTimestampMs" : "7500",
+          "endTimestampMs" : "7600"
+        }
+      }
     }
   ]
 }

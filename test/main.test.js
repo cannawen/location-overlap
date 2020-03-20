@@ -16,6 +16,10 @@ describe('Two data sets', () => {
         "placeId": "DEFTestPlaceId", 
         "startTimestampMs" : 3500,
         "endTimestampMs" : 4000
+      }, {
+        "placeId": "ABCTestPlaceId", 
+        "startTimestampMs" : 7500,
+        "endTimestampMs" : 7600
       }])
   })
 })
@@ -32,14 +36,14 @@ describe('has user been to specific placeId', () => {
   })
 
   test('user visited before target time', () => {
-    expect(didUserVisit(testData, "ABCTestPlaceId", 0 ,500)).toBe(false);
+    expect(didUserVisit(testData, "ABCTestPlaceId", 0, 500)).toBe(false);
   })
 
   test('user visited after target time', () => {
     expect(didUserVisit(testData, "ABCTestPlaceId", 2500, 3500)).toBe(false);
   })
 
-  test('user was there during target time', () => {      
+  test('user was there during target time', () => {
     expect(didUserVisit(testData, "ABCTestPlaceId", 900, 2100)).toBe(true);
     expect(didUserVisit(testData, "ABCTestPlaceId", 1100, 1900)).toBe(true);
     expect(didUserVisit(testData, "ABCTestPlaceId", 900, 1900)).toBe(true);

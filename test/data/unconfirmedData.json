@@ -23,16 +23,25 @@
           "endTimestampMs" : "4000"
         }
       }
-    }, 
+    },
     {      
       "activitySegment" : {} 
-    },   
+    },
     {
       "placeVisit" : { 
         "location": { "placeId" : "HIJTestPlaceId"},
         "duration" : {
           "startTimestampMs" : "5000",
           "endTimestampMs" : "6000"
+        }
+      }
+    },
+    {
+      "placeVisit" : { 
+        "location": { "placeId" : "ABCTestPlaceId"},
+        "duration" : {
+          "startTimestampMs" : "7000",
+          "endTimestampMs" : "8000"
         }
       }
     }
