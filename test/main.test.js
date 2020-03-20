@@ -10,12 +10,24 @@ describe('Google Location History Takeout data file', () => {
       testData = JSON.parse(fs.readFileSync('./test/data/data.json', 'utf8'))
     })
 
-    test('yes', () => {
-      expect(didUserVisit(testData, "ABCTestPlaceId")).toBe(true);
+    test('user did not visit place at all', () => {
+      expect(didUserVisit(testData, "XYZTestPlaceId", 0, 1000000).length).toBe(0);
     })
 
-    test('no', () => {
-      expect(didUserVisit(testData, "XYZTestPlaceId")).toBe(false);
+    test('user visited before target time', () => {
+      expect(didUserVisit(testData, "ABCTestPlaceId", 0 ,500).length).toBe(0);
     })
+
+    test('user visited after target time', () => {
+      expect(didUserVisit(testData, "ABCTestPlaceId", 2500, 3500).length).toBe(0);
+    })
+
+    test('user was there during target time', () => {      
+      expect(didUserVisit(testData, "ABCTestPlaceId", 900, 2100).length).toBe(1);
+      expect(didUserVisit(testData, "ABCTestPlaceId", 1100, 1900).length).toBe(1);
+      expect(didUserVisit(testData, "ABCTestPlaceId", 900, 1900).length).toBe(1);
+      expect(didUserVisit(testData, "ABCTestPlaceId", 1100, 2100).length).toBe(1);
+    })
+
   })
 })

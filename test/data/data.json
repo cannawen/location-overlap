@@ -4,7 +4,13 @@
       "activitySegment" : {} 
     },
     {
-      "placeVisit" : { "location": { "placeId" : "ABCTestPlaceId"}}
+      "placeVisit" : { 
+        "location": { "placeId" : "ABCTestPlaceId"},
+        "duration" : {
+          "startTimestampMs" : "1000",
+          "endTimestampMs" : "2000"
+        }
+      }
     }
   ]
 }
