@@ -12,7 +12,11 @@ describe('Two data sets', () => {
   })
 
   test('find overlap', () => {
-    expect(findOverlap(confirmedData, unconfirmedData).length).toBe(1)
+    expect(findOverlap(confirmedData, unconfirmedData)).toEqual([{
+        "placeId": "DEFTestPlaceId", 
+        "startTimestampMs" : 3500,
+        "endTimestampMs" : 4000
+      }])
   })
 })
 
