@@ -5,7 +5,11 @@
     },
     {
       "placeVisit" : { 
-        "location": { "placeId" : "ABCTestPlaceId"}
+        "location": { "placeId" : "ABCTestPlaceId"},
+        "duration" : {
+          "startTimestampMs" : "1000",
+          "endTimestampMs" : "2000"
+        }
       }
     }
   ]
